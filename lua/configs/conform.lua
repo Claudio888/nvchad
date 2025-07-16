@@ -6,15 +6,6 @@ local options = {
     html = { "prettier" },
     terraform = { "terraform_fmt" },
   },
-  formatters = {
-    opts = {
-      terraform_fmt = {
-        command = "terraform",
-        args = {"fmt"},
-        stdin = true,
-      }
-    }
-  }
 
   -- format_on_save = {
   --   -- These options will be passed to conform.format()
