@@ -39,3 +39,10 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.api.nvim_create_user_command("CmpToggle", function()
+  vim.b.cmp_enabled = not vim.b.cmp_enabled
+  require("cmp").setup.buffer { enabled = vim.b.cmp_enabled }
+  print("CMP " .. (vim.b.cmp_enabled and "enabled" or "disabled"))
+end, {})
+
