@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 vim.filetype.add({
   extension = {
     tf = "terraform",
+    tfvars = "terraform"
   }
 })
 -- bootstrap lazy and all plugins
