@@ -1,11 +1,11 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
-vim.filetype.add({
+vim.filetype.add {
   extension = {
     tf = "terraform",
-    tfvars = "terraform"
-  }
-})
+    tfvars = "terraform-vars",
+  },
+}
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -46,4 +46,3 @@ vim.api.nvim_create_user_command("CmpToggle", function()
   require("cmp").setup.buffer { enabled = vim.b.cmp_enabled }
   print("CMP " .. (vim.b.cmp_enabled and "enabled" or "disabled"))
 end, {})
-

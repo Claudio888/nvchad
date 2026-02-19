@@ -13,6 +13,8 @@ return {
     end,
   },
 
+  { import = "plugins.dap" },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
